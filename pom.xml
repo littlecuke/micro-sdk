@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.micro</groupId>
+    <artifactId>micro-sdk</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>micro-api-knife4j-starter</module>
+        <module>micro-api-swagger-starter</module>
+        <module>micro-auth-jwt-starter</module>
+        <module>micro-auth-security-starter</module>
+        <module>micro-boot-starter</module>
+        <module>micro-cache-redis-starter</module>
+        <module>micro-cloud-feign-starter</module>
+        <module>micro-cloud-eureka-starter</module>
+        <module>micro-cloud-hystrix-starter</module>
+        <module>micro-cloud-starter</module>
+        <module>micro-cloud-zuul-starter</module>
+        <module>micro-commons</module>
+        <module>micro-db-mysql-starter</module>
+        <module>micro-mq-kafka-starter</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--    boot 版本依赖    -->
+        <boot.version>2.3.12.RELEASE</boot.version>
+        <!--    cloud 版本依赖    -->
+        <cloud.version>Hoxton.SR12</cloud.version>
+
+        <!--   module 版本依赖     -->
+        <commons.version>1.0-SNAPSHOT</commons.version>
+        <micro.version>1.0-SNAPSHOT</micro.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--     boot       -->
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-boot-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <!--   cloud         -->
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-cloud-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-cloud-eureka-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-cloud-feign-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-cloud-hystrix-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-cloud-zuul-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <!--   plugin         -->
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-api-swagger-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-cache-redis-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-db-mysql-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-mq-kafka-starter</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+            <!--    commons        -->
+            <dependency>
+                <groupId>org.micro</groupId>
+                <artifactId>micro-commons</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
