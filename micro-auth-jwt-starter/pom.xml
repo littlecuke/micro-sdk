@@ -24,6 +24,10 @@
             <artifactId>jjwt</artifactId>
             <version>${jjwt.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.micro</groupId>
+            <artifactId>micro-commons</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

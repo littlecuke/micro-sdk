@@ -7,4 +7,7 @@
 * Cloud Version: Hoxton.SR12
 * Boot Version: 2.3.12.RELEASE
 
+### 范例 micro - samples
+
+[使用参考](https://github.com/littlecuke/micro-samples.git)
 
