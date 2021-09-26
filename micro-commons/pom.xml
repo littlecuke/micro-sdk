@@ -20,7 +20,7 @@
         <fastjson.version>1.2.78</fastjson.version>
         <modelmapper.version>2.4.2</modelmapper.version>
         <http.client.version>4.5.13</http.client.version>
-        <http.core.version>4.4.14</http.core.version>
+        <http.core.version>4.4.13</http.core.version>
         <oshi.version>5.8.2</oshi.version>
         <lombok.version>1.18.20</lombok.version>
     </properties>

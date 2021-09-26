@@ -23,6 +23,7 @@
         <module>micro-commons</module>
         <module>micro-db-mysql-starter</module>
         <module>micro-mq-kafka-starter</module>
+        <module>micro-test</module>
     </modules>
 
     <properties>
