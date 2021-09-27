@@ -1,5 +1,7 @@
 package com.auth.jwt.verify;
 
+import cn.hutool.core.bean.BeanUtil;
+import com.auth.jwt.domain.metadata.MicroAbstractToken;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -82,29 +84,8 @@ public class JwtWorker {
     /**
      * 根据userId和openid生成token
      */
-    public static String generateToken(String openId, Integer userId) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("userId", userId);
-        map.put("openId", openId);
-        map.put("sub", openId);
-        return createJWT(map, TOKEN_EXPIRED_TIME);
+    public static String generateToken(Class<? extends MicroAbstractToken> token) {
+        return createJWT(BeanUtil.beanToMap(token), TOKEN_EXPIRED_TIME);
     }
 
-    public static void main(String[] args) {
-        // 生成token
-        String s = generateToken("111", 20);
-        System.out.println(s);
-
-        // 验证
-        String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMTEiLCJvcGVuSWQiOiIxMTEiLCJleHAiOjE2MzI1ODQ2MjMsInVzZXJJZCI6MjAsImlhdCI6MTYzMjU4MjAzMSwianRpIjoidG9rZW5JZCJ9.QfgSbL9Cu_KvW6LUDQiB2f2hcs9rST_0GXEZYFCU3vg";
-        Claims claims = verifyJwt(token);
-        String subject = claims.getSubject();
-        String userId = claims.get("userId").toString();
-        String openId = (String)claims.get("openId");
-        String sub = (String)claims.get("sub");
-        System.out.println("subject:" + subject);
-        System.out.println("userId:" + userId);
-        System.out.println("openId:" + openId);
-        System.out.println("sub:" + sub);
-    }
 }
