@@ -1,4 +1,4 @@
-package com.auth.jjwt.builder;
+package com.auth.jwt.builder;
 
 public class JwtEntryBuilder {
 }

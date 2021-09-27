@@ -1,4 +1,4 @@
-package com.auth.jjwt.domain.metadata;
+package com.auth.jwt.domain.metadata;
 
 import lombok.Data;
 

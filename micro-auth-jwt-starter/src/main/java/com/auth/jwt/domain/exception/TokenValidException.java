@@ -1,4 +1,4 @@
-package com.auth.jjwt.domain.exception;
+package com.auth.jwt.domain.exception;
 
 import com.micro.commons.exception.MicroException;
 

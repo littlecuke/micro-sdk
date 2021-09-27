@@ -1,4 +1,4 @@
-package com.auth.jjwt.verify;
+package com.auth.jwt.verify;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
