@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.micro</groupId>
+    <artifactId>micro-sdk</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>micro-commons</module>
+        <module>micro-auth-jwt-starter</module>
+        <module>micro-cache-redis-starter</module>
+        <module>micro-cloud-openfeign-starter</module>
+        <module>micro-api-knife4j-starter</module>
+        <module>micro-mq-kafka-starter</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--   通用依赖      -->
+        <cloud.alibaba.version>2.2.7.RELEASE</cloud.alibaba.version>
+        <cloud.version>Hoxton.SR12</cloud.version>
+        <boot.version>2.3.12.RELEASE</boot.version>
+        <!--   自定义组件     -->
+        <micro.version>1.0-SNAPSHOT</micro.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--   自定义服务        -->
+            <dependency>
+                <groupId>com.micro</groupId>
+                <artifactId>micro-commons</artifactId>
+                <version>${micro.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
