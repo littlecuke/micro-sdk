@@ -24,22 +24,8 @@
         <module>micro-db-mysql-starter</module>
         <module>micro-mq-kafka-starter</module>
         <module>micro-test</module>
+        <module>micro-cloud-alibaba-starter</module>
     </modules>
-
-    <properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!--    boot 版本依赖    -->
-        <boot.version>2.3.12.RELEASE</boot.version>
-        <!--    cloud 版本依赖    -->
-        <cloud.version>Hoxton.SR12</cloud.version>
-
-        <!--   module 版本依赖     -->
-        <commons.version>1.0-SNAPSHOT</commons.version>
-        <micro.version>1.0-SNAPSHOT</micro.version>
-    </properties>
 
     <dependencyManagement>
         <dependencies>
@@ -115,6 +101,22 @@
             </releases>
         </repository>
     </repositories>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--    boot 版本依赖    -->
+        <boot.version>2.3.12.RELEASE</boot.version>
+        <!--    cloud 版本依赖    -->
+        <cloud.version>Hoxton.SR12</cloud.version>
+        <!--    cloud - alibaba 版本依赖    -->
+        <cloud.alibaba.version>2.2.7.RELEASE</cloud.alibaba.version>
+        <!--   module 版本依赖     -->
+        <commons.version>1.0-SNAPSHOT</commons.version>
+        <micro.version>1.0-SNAPSHOT</micro.version>
+    </properties>
 
     <pluginRepositories>
         <pluginRepository>
