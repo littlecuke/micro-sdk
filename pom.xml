@@ -15,6 +15,9 @@
         <module>micro-cloud-openfeign-starter</module>
         <module>micro-api-knife4j-starter</module>
         <module>micro-mq-kafka-starter</module>
+        <module>micro-db-mysql-starter</module>
+        <module>micro-cloud-openfeign-starter</module>
+        <module>micro-test</module>
     </modules>
 
     <properties>
